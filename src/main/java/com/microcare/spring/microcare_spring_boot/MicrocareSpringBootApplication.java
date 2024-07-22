@@ -9,8 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class MicrocareSpringBootApplication {
-	@Autowired
-	 ExampleComponent ec;
+
 	
 	public static void main(String[] args) {
 		SpringApplication.run(MicrocareSpringBootApplication.class, args);
