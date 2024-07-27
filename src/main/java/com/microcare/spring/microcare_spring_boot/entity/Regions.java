@@ -1,8 +1,13 @@
 package com.microcare.spring.microcare_spring_boot.entity;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,6 +20,19 @@ public class Regions {
 	
 	@Column(name="region_name")
 	private String regionName;
+	
+	
+	/*@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="countryId",referencedColumnName="country_id")
+	List<Countries> countries;
+
+	public List<Countries> getCountries() {
+		return countries;
+	}
+
+	public void setCountries(List<Countries> countries) {
+		this.countries = countries;
+	}*/
 
 	public long getRegionId() {
 		return regionId;
